@@ -1,0 +1,10 @@
+<div class="text-center" [ngClass]="isAbsoluteNeeded?'no-data':'no-data-without-position'">
+  <!-- <i class="fa fa-exclamation-triangle fa-3x text-danger" aria-hidden="true"></i> -->
+  <img src="../../../../assets/error_msg_icon.png"/>
+  <!-- <h4 class="pt-3">
+    Whoops !</h4> -->
+  <p *ngIf="isRefreshNeedToShow">Sorry, we could not find any relevant data. <a href="javascript:void(0)" (click)="reload()" style="color: #2e63f3">Refresh</a> or try again later.</p>
+  <p *ngIf="!isRefreshNeedToShow">Sorry, we could not find any relevant data. Please try again later.</p>
+  <!--  <h4 class="pt-4">Sorry, we could not find any relevant data.
+     Please Try again.</h4> -->
+</div>
